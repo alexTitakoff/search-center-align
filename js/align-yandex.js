@@ -1,7 +1,3 @@
-
-
-
-
 function preload() {
     if (document.querySelector('body') == null) {
         setTimeout(() => {

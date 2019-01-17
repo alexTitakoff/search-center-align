@@ -1,9 +1,4 @@
-
-
-
-
 function preload() {
-    // alert('google')
     if (document.querySelector('body') == null) {
         setTimeout(() => {
             return preload()
@@ -26,19 +21,20 @@ function preload() {
         
     }
 }
-
 preload()
 
 
 function run() {
     if (document.querySelector('#rcnt') == null) {
         setTimeout(() => {
-            // console.log('ci')
             return run()
         }, 10);
     } else {                
-        // alert('google')
-        document.querySelector('#rcnt').style.marginLeft = '35%' // поиск плашка
+        document.querySelector('#rcnt').style.marginLeft = '22%' // поиск плашка
+        document.querySelectorAll('.mw')[1].style.maxWidth = '4000px' // поиск плашка
+        document.querySelectorAll('.mw')[1].style.width = '100%' // поиск плашка
+
+
         document.querySelector('.srp #tsf').style.marginLeft = '30%' // поиск
         document.querySelector('#hdtb').style.marginLeft = '23%' //
         document.querySelector('#topabar').style.marginLeft = '22%' //
