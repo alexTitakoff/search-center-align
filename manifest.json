@@ -1,0 +1,52 @@
+{
+    "name": "Search center align ",
+    "version": "1.0",
+    "manifest_version": 2,
+
+    "description": "Search center",
+    "icons": {
+        "19": "images/icon_19.png",
+        "38": "images/icon_38.png",
+        "128": "images/icon_128.png"
+    },
+
+    "browser_action": {
+        "default_title": "browser_action: default_title",
+        "default_icon": {
+            "19": "images/icon_19.png",
+            "38": "images/icon_38.png"
+        },
+        "default_popup": "html/main.html"
+    },
+
+
+    "background": {
+    },
+
+    "permissions" : [
+        "tabs",
+        "<all_urls>",
+        "file://*/*",
+        "http://*/*",
+        "https://*/*"
+    ],
+
+    "content_scripts": [
+            {
+                "matches": ["https://*.yandex.ru/*"],
+                "exclude_matches": ["https://yandex.ru/"],
+                "run_at": "document_start",
+                "js": ["js/align-yandex.js"]
+               
+            },
+            {
+                "matches": ["https://www.google.ru/*"],
+                "exclude_matches": ["https://www.google.ru/"],
+                "run_at": "document_start",
+                "js": ["js/align-google.js"]
+            }
+    ],
+
+    "options_page": "html/options.html",
+    "homepage_url": "http://yourdomainhere.com/"
+}
