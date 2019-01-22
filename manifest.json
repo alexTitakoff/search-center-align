@@ -13,7 +13,7 @@
     "browser_action": {
         "default_title": "browser_action: default_title",
         "default_icon": {
-            "19": "images/icon_19.png",
+            "19": "images/icon_19.png", 
             "38": "images/icon_38.png"
         },
         "default_popup": "html/main.html"
@@ -28,14 +28,14 @@
     "content_scripts": [
             {
                 "matches": ["https://yandex.ru/*","https://www.yandex.ru/*"],
-                "exclude_matches": ["https://yandex.ru/"],
+                "exclude_matches": ["https://yandex.ru/", "https://www.yandex.ru/"],
                 "run_at": "document_start",
                 "js": ["js/align-yandex.js"]
                
             },
             {
-                "matches": ["https://www.google.ru/*"],
-                "exclude_matches": ["https://www.google.ru/"],
+                "matches": ["https://www.google.ru/*", "https://www.google.com/*"],
+                "exclude_matches": ["https://www.google.ru/", "https://www.google.com/"],
                 "run_at": "document_start",
                 "js": ["js/align-google.js"]
             }
