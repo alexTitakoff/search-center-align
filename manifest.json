@@ -1,6 +1,6 @@
 {
     "name": "Search center aligner ",
-    "version": "1.1",
+    "version": "1.2",
     "manifest_version": 2,
 
     "description": "Search center aligner",
@@ -23,13 +23,7 @@
     "background": {
     },
 
-    "permissions" : [
-        "tabs",
-        "<all_urls>",
-        "file://*/*",
-        "http://*/*",
-        "https://*/*"
-    ],
+    "permissions" : ["https://yandex.ru/*","https://www.yandex.ru/*", "https://www.google.ru/*"],
 
     "content_scripts": [
             {
