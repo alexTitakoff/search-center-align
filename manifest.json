@@ -34,7 +34,7 @@
     "content_scripts": [
             {
                 "matches": ["https://*.yandex.ru/*"],
-                "exclude_matches": ["https://yandex.ru/"],
+                "exclude_matches": ["https://yandex.ru/","https://mail.yandex.ru/*"],
                 "run_at": "document_start",
                 "js": ["js/align-yandex.js"]
                
