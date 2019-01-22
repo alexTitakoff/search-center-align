@@ -15,8 +15,7 @@ function preload() {
             newDiv.style.height = "100%";
             newDiv.style.top = "0";
         
-        document.querySelector('body').append(newDiv)        
-        
+        document.querySelector('body').append(newDiv)
         
         
     }

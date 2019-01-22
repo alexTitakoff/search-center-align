@@ -17,8 +17,6 @@ function preload() {
         
         document.querySelector('body').append(newDiv)        
         
-        
-        
     }
 }
 preload()
