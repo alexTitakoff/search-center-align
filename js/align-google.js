@@ -1,5 +1,7 @@
+let counter = 0
+
 function preload() {
-    if (document.querySelector('body') == null) {
+    if (!document.querySelector('body')) {
         setTimeout(() => {
             return preload()
         }, 10);
@@ -27,6 +29,8 @@ function run() {
         setTimeout(() => {
             return run()
         }, 10);
+    } else if(!document.querySelector("#hdtb-msb-vis").querySelectorAll('.hdtb-mitem')[0].classList.contains('hdtb-msel')) { // если гугл поиск не на вкалдке Все
+        document.querySelector('#white').remove()
     } else {                
         document.querySelector('#rcnt').style.marginLeft = '22%' // поиск плашка
         document.querySelectorAll('.mw')[1].style.maxWidth = '4000px' // поиск плашка
