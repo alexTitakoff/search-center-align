@@ -24,6 +24,7 @@
     },
 
     "permissions" : [
+      "activeTab",
       "https://yandex.ru/*",
       "https://www.yandex.ru/*", 
       "https://www.google.ru/*",
