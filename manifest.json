@@ -23,8 +23,12 @@
     "background": {
     },
 
-    "permissions" : ["https://yandex.ru/*","https://www.yandex.ru/*", "https://www.google.ru/*"],
-
+    "permissions" : [
+      "https://yandex.ru/*",
+      "https://www.yandex.ru/*", 
+      "https://www.google.ru/*",
+      "https://www.duckduckgo.com/*"
+    ],
     "content_scripts": [
             {
                 "matches": ["https://yandex.ru/*","https://www.yandex.ru/*"],
@@ -43,7 +47,13 @@
                 "exclude_matches": ["https://www.google.ru/", "https://www.google.com/"],
                 "run_at": "document_start",
                 "js": ["js/align-google.js"]
-            }
+            },
+            {
+              "matches": ["https://duckduckgo.com/*"],
+              "exclude_matches": ["https://duckduckgo.com/"],
+              "run_at": "document_start",
+              "js": ["js/align-duckduckgo.js"]
+          }
     ],
 
     "options_page": "html/options.html",

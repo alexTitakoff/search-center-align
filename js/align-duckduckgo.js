@@ -2,22 +2,16 @@
 // 2.Ставим плашку 
 // 3.Запускаем изменения и убераем плашку 
 
+console.log('hello duck duck go aligner')
+
 function run() {
-    if (document.querySelector('#rcnt') == null) {
+    if (document.querySelector('.cw') == null) {
         setTimeout(() => {
             return run()
         }, 10);
-    } else if(!document.querySelector("#hdtb-msb-vis").querySelectorAll('.hdtb-mitem')[0].classList.contains('hdtb-msel')) { // если гугл поиск не на вкалдке Все
-        document.querySelector('#white').remove()
-    } else {                
-        document.querySelector('#rcnt').style.marginLeft = '22%' // поиск плашка
-        document.querySelectorAll('.mw')[1].style.maxWidth = '4000px' // поиск плашка
-        document.querySelectorAll('.mw')[1].style.width = '100%' // поиск плашка
-
-
-        document.querySelector('.srp #tsf').style.marginLeft = '30%' // поиск
-        document.querySelector('#hdtb').style.marginLeft = '23%' //
-        document.querySelector('.appbar').style.marginLeft = '22%' //
+    } else {
+        document.querySelectorAll('.cw')[0].style.marginLeft = '22%'                
+        document.querySelectorAll('.cw')[1].style.marginLeft = '22%'                
         document.querySelector('#white').remove()
 
     }
