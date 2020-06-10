@@ -7,6 +7,12 @@ Seals will give the mood for every day.
 
 If you have a large monitor.
 
+release 1.4: 
+- fix google updates
+- fix yandex updates
+- add duckduckgo 
+
+
 release 1.3: 
 - google and yandex image pages fix
 - permission edits
