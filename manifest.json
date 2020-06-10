@@ -24,37 +24,34 @@
     },
 
     "permissions" : [
-      "activeTab",
-      "https://yandex.ru/*",
-      "https://www.yandex.ru/*", 
-      "https://www.google.ru/*",
-      "https://www.duckduckgo.com/*"
+      "activeTab"
     ],
     "content_scripts": [
             {
-                "matches": ["https://yandex.ru/*","https://www.yandex.ru/*"],
+                "matches": ["https://*.yandex.ru/*","https://*.yandex.ru/*"],
                 "exclude_matches": [
                     "https://yandex.ru/", 
-                    "https://www.yandex.ru/", 
+                    "https://yandex.ru/", 
                     "https://yandex.ru/images/*", 
-                    "https://www.yandex.ru/images/*"
+                    "https://yandex.ru/images/*"
                 ],
                 "run_at": "document_start",
                 "js": ["js/align-yandex.js"]
                
             },
             {
-                "matches": ["https://www.google.ru/*", "https://www.google.com/*"],
-                "exclude_matches": ["https://www.google.ru/", "https://www.google.com/"],
-                "run_at": "document_start",
-                "js": ["js/align-google.js"]
-            },
-            {
-              "matches": ["https://duckduckgo.com/*"],
-              "exclude_matches": ["https://duckduckgo.com/"],
+              "matches": ["https://*.google.ru/*", "https://*.google.com/*"],
+              "exclude_matches": ["https://google.ru/", "https://google.com/"],
               "run_at": "document_start",
-              "js": ["js/align-duckduckgo.js"]
-          }
+              "js": ["js/align-google.js"]
+          },
+          {
+            "matches": ["https://duckduckgo.com/*"],
+            "exclude_matches": ["https://duckduckgo.com/"],
+            "run_at": "document_start",
+            "js": ["js/align-duckduckgo.js"]
+        }
+            
     ],
 
     "options_page": "html/options.html",
