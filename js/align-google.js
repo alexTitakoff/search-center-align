@@ -1,4 +1,7 @@
-let counter = 0
+// 1.Проверяем экран
+// 2.Ставим плашку 
+// 3.Запускаем изменения и убераем плашку 
+//let counter = 0
 function run() {
     if (document.querySelector('#rcnt') == null) {
         setTimeout(() => {
@@ -14,7 +17,7 @@ function run() {
 
         document.querySelector('.srp #tsf').style.marginLeft = '30%' // поиск
         document.querySelector('#hdtb').style.marginLeft = '23%' //
-        document.querySelector('#topabar').style.marginLeft = '22%' //
+        document.querySelector('.appbar').style.marginLeft = '22%' //
         document.querySelector('#white').remove()
 
     }
@@ -38,10 +41,8 @@ function preload() {
             newDiv.style.top = "0";
         
         document.querySelector('body').append(newDiv)  
-        
         run()
-        
-    }
+      }
 }
 
 // check screen size
